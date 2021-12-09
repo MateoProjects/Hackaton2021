@@ -1,0 +1,63 @@
+<resources>
+    <string name="app_name">ELAapp</string>
+    <string name="tittle_register"> Registre</string>
+    <string name="nom"> Nom</string>
+    <string name="your_name"> Nom </string>
+    <string name="cognom"> Cognom</string>
+    <string name="your_lastname"> El teu cognom</string>
+    <string name="mail_doctor"> Email</string>
+    <string name="exempla_mail"> nomDr@bellvitge.com</string>
+    <string name="save_button_registerr">GUARDA</string>
+    <string name="open">Open</string>
+    <string name="close">Close</string>
+    <string name="about">Sobre el projecte</string>
+    <string name="text_about"> Projecte desenvolupat com a treball final de grau d\'enginyeria
+        informàtica. Aquest treball té com a objectiu brindar una alternativa econòmica a dispositius mèdics
+        emprant codi obert. <br /> <br>
+        El projecte està sent desenvolupat per Ramon Mateo Navarro amb la col·laboració de la
+            FIB-UPC i la fundació Miquel Valls.</br>  </string>
+    <string name="nom_info_per">Nom:</string>
+    <string name="cognom_infop">Cognom:</string>
+    <string name="informaci_personal_titol">Informació personal</string>
+    <string name="email_dr">Email Dr:</string>
+    <string name="enrere_button">Enrere</string>
+    <string name="edita_info_p">Modificar</string>
+    <string name="exemple">Exemple</string>
+    <string name="frases">Frases</string>
+    <string name="menjar">Menjar</string>
+    <string name="dades">Dades</string>
+    <string name="enviar_dades">Enviar Dades</string>
+    <string name="dades_personals">Dades Personals</string>
+    <string name="enviament_de_dades">Enviament de dades</string>
+    <string name="apats">Àpats</string>
+    <string name="exercissis_de_pronunciaci">Exercicis de pronunciació</string>
+    <string name="temps_de_menjar">Temps de menjar</string>
+    <string name="minuts">Minuts:</string>
+    <string name="_00">00</string>
+    <string name="informaci_personal">Informació personal</string>
+    <string name="sortir">Sortir</string>
+    <string name="ela_app">ELA APP</string>
+    <string name="ok">OK</string>
+    <string name="error_register_message">No has omplert tots els camps</string>
+    <string name="error_register">Error en el registre</string>
+    <string name="invalid_mail">Correu Invalid</string>
+    <string name="ok_register">El registre s\'ha realitzat correctament</string>
+    <string name="error_title">Error</string>
+    <string name="message_error_ip_modified">Les dades escrites no son vàlides"</string>
+    <string name="ritme_cardiac_i_oxigen">Ritme cardiac i Oxigen</string>
+    <string name="informacio">Informació</string>
+    <string name="text_info_eat">El temps ha sigut guardat correctament</string>
+    <string name="text_info_eat_error">El temps introduït no és correcte</string>
+    <string name="enviar">Enviar</string>
+    <string name="metriques">Constants vitals</string>
+    <string name="constants_vitals">Constants Vitals</string>
+    <string name="dispositius_trobats">Dispositius trobats</string>
+    <string name="error_ble_enable">Error en la connexió Bluetooth</string>
+    <string name="oximeterarduino">OximeterArduino</string>
+    <string name="scan">SCAN</string>
+    <string name="nobluetooth">El teu dispositiu no disposa de Bluetooth</string>
+    <string name="start">Start</string>
+    <string name="stop">Stop</string>
+
+
+</resources>

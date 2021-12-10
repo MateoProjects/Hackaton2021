@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragments.rtmetrics">
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="80dp"
+        android:textAllCaps="true"
+        android:textSize="80dp"
+        android:textStyle="bold"
+        android:textAlignment="center"
+        android:text="@string/constants_vitals">
+
+    </TextView>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginTop="100dp"
+        android:orientation="horizontal">
+
+    <ImageView
+        android:layout_width="180dp"
+        android:layout_height="180dp"
+        android:scaleType="fitXY"
+        android:layout_marginEnd="100dp"
+        android:src="@drawable/o2">
+
+    </ImageView>
+    <ImageView
+        android:layout_width="180dp"
+        android:layout_height="180dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/rc">
+
+    </ImageView>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginTop="80dp"
+        android:orientation="horizontal">
+
+    <TextView
+        android:id="@+id/oxygenNumber"
+        android:layout_width="180dp"
+        android:layout_height="100dp"
+        android:ems="10"
+        android:gravity="center"
+        android:text="@string/_00"
+        android:autoSizeMaxTextSize="100dp"
+        android:autoSizeMinTextSize="12sp"
+        android:autoSizeTextType="uniform"
+        android:layout_marginEnd="100dp" />
+
+    <TextView
+        android:id="@+id/hratenumber"
+        android:layout_width="180dp"
+        android:layout_height="100dp"
+        android:ems="10"
+        android:textAlignment="center"
+        android:gravity="center"
+        android:autoSizeMaxTextSize="100dp"
+        android:autoSizeMinTextSize="12sp"
+        android:autoSizeTextType="uniform"
+        android:text="@string/_00"/>
+    </LinearLayout>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/start"
+        android:textAlignment="center"
+        android:layout_marginTop= "80sp"
+        android:layout_gravity="center"
+        android:textSize="40sp"
+        android:backgroundTint="@color/blue_1"
+        android:id="@+id/buttonStartMetrics">
+
+    </Button>
+
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/enrere_button"
+        android:textAlignment="center"
+        android:layout_marginTop="40sp"
+        android:layout_gravity="center"
+        android:textSize="40sp"
+        android:backgroundTint="@color/blue_1"
+        android:id="@+id/buttonBackMetrics">
+
+    </Button>
+
+
+</LinearLayout>
+</FrameLayout>

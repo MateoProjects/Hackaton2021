@@ -14,12 +14,13 @@ def createUser(user)-> None:
     con = sqlite3.connect(PATH)
     cur = con.cursor()
     if not checkUser(user[2]):
-        cur.execute('INSERT INTO Users (Name, LastName, FullName, Age, psw) '
-                'VALUES (?, ?, ?, ?, ?)', user)
+        cur.execute('INSERT INTO Users (Name, LastName, FullName, Age, psw, psychologist) '
+                'VALUES (?, ?, ?, ?, ?, ?)', user)
         con.commit()
         con.close()
         createTableSentiment(user[2])
         logging.info("User created")
+    return 0
 
 def checkUser(user) -> bool:
     """
@@ -84,7 +85,7 @@ def createTableSentiment(fullname):
     con.close()
     logging.info("Table created")
 
-def addSentiment(fullname, text, sentiment, label):
+def addSentimentDb(fullname, text, sentiment, label):
     """
     Add sentiment to the database
     @param fullname: user fullname
@@ -98,10 +99,10 @@ def addSentiment(fullname, text, sentiment, label):
     con.commit()
     con.close()
     logging.info("Sentiment added")
-    
+    return 0
 
 
-def deleteUser(fullname):
+def deleteUserDb(fullname):
     """
     Delete user from the database
     @param fullname: user fullname
@@ -114,6 +115,7 @@ def deleteUser(fullname):
     con.commit()
     con.close()
     logging.info("User deleted")
+    return 0
 
 def restartDB():
     """
@@ -124,13 +126,59 @@ def restartDB():
     cur.execute('SELECT * from Users')
     users = cur.fetchall()
     for user in users:
-        deleteUser(user[len(user)-1])
+        deleteUserDb(user[len(user)-1])
     con.commit()
     con.close()
-    print("Database Restarted")    
+    print("Database Restarted")
 
+def getSentimentsForUser(psychologist, user):
+    """
+    Get the sentiment for the user
+    @param psychologist: psychologist fullname
+    @param user: user fullname
+    @return: list with the sentiment
+    """
+    con = sqlite3.connect(PATH)
+    cur = con.cursor()
+    cur.execute('SELECT psychologist FROM Users' +' where FullName = ?', [user])
+    name = cur.fetchall()
+    print(name[0])
+    if psychologist in name[0]:
+        print('im here')
+        cur.execute('SELECT * FROM ' + user + '_sentiment')
+        con.commit()
+        sentiments = cur.fetchall()
+        con.close()
+        return sentiments
+    else:
+        con.close()
+        print("User not admited")
+        return None  
 
-if __name__ == '__main__':
-    #createUser(['Juan', 'Perez', 'JuanPerez', '25', '123'])
-    #createUser(['Juan', 'Ramon', 'JuanRamon', '25', '123'])
-    restartDB()
+def insertPsychology(fullname, psychologist):
+    """
+    Insert psychologist to the database
+    @param fullname: user fullname
+    @param psychologist: psychologist fullname
+    @action: insert psychologist to the database
+    """
+    con = sqlite3.connect(PATH)
+    cur = con.cursor()
+    cur.execute('UPDATE Users SET psychologist = ? WHERE FullName = ?', [psychologist, fullname])
+    con.commit()
+    con.close()
+    logging.info("Psychologist added")
+
+def getPsychologists():
+    """
+    Get all psychologists
+    @return: list with all psychologists
+    """
+    con = sqlite3.connect(PATH)
+    cur = con.cursor()
+    cur.execute('SELECT psychologist FROM Users')
+    psychologists = cur.fetchall()
+    con.commit()
+    con.close()
+    return psychologists
+

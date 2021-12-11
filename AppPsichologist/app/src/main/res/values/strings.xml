@@ -1,0 +1,30 @@
+<resources>
+    <string name="app_name">PsicologiaApp</string>
+    <string name="action_settings">Settings</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    <string name="nom">Nom</string>
+    <string name="your_name">Your Name</string>
+    <string name="tittle_register">Registre</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="save_button_registerr">Registre</string>
+    <string name="cognom">Cognom</string>
+    <string name="your_lastname">Segon Cognom</string>
+    <string name="registre">Registre</string>
+    <string name="el_teu_nom">El teu nom</string>
+    <string name="el_teu_cognom">El teu cognom</string>
+    <string name="contrasenya">Contrasenya</string>
+    <string name="edat">Edat</string>
+    <string name="busca_usuari">Busca Usuari</string>
+    <string name="nom_usuari">Nom Usuari</string>
+    <string name="buscar">Buscar</string>
+    <string name="cerca_usuari">Cerca Usuari</string>
+    <string name="cerca">cerca</string>
+</resources>

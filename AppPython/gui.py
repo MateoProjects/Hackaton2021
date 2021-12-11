@@ -2,7 +2,6 @@ import PySimpleGUI as sg
 import os
 import json
 import requests
-sg.theme('Dark Amber')  # Let's set our own color theme
 
 def getFullName():
     #get full name from register.txt
@@ -12,8 +11,8 @@ def getFullName():
 
 # STEP 1 define the layout
 layout = [ 
-            [sg.Text('Diari')],
-            [sg.Input(key='Text')],
+            [sg.Text('Diari', size=(30, 1), )],
+            [sg.Multiline(key='Text', size=(40, 20))],
             [sg.Button('Enviar'), sg.Button('Sortir')]
          ]
 layoutRegister = [
@@ -32,7 +31,7 @@ layoutRegister = [
         ]
 
 #STEP 2 - create the window
-window = [sg.Window('MyDiari', layout), sg.Window('MyDiari', layoutRegister)]
+window = [sg.Window('El meu diari', layout), sg.Window('MyDiari', layoutRegister)]
 
 
 
@@ -70,5 +69,7 @@ if __name__ == '__main__':
             res = requests.post('http://localhost:5000/addSentiment', json={"Text": text, "FullName": fullName})
             if res.status_code == 200:
                 sg.popup_ok("El sentiment s'ha guardat correctament")  # Shows OK button
+                # clear window
+                window[0].Element('Text').Update('') 
             
 

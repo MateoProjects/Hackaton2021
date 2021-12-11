@@ -4,11 +4,16 @@ import json
 import requests
 sg.theme('Dark Amber')  # Let's set our own color theme
 
+def getFullName():
+    #get full name from register.txt
+    with open('register.txt', 'r') as f:
+        data = json.load(f)
+        return data['FullName']
 
 # STEP 1 define the layout
 layout = [ 
             [sg.Text('Diari')],
-            [sg.Input()],
+            [sg.Input(key='Text')],
             [sg.Button('Enviar'), sg.Button('Sortir')]
          ]
 layoutRegister = [
@@ -60,6 +65,10 @@ if __name__ == '__main__':
         if event == sg.WIN_CLOSED or event == 'Exit':     # If user closed window with X or if user clicked "Exit" button then exit
             break
         if event == 'Enviar':
-            print("Boto Enviar apretat")
-
+            fullName = getFullName()
+            text = values['Text']
+            res = requests.post('http://localhost:5000/addSentiment', json={"Text": text, "FullName": fullName})
+            if res.status_code == 200:
+                sg.popup_ok("El sentiment s'ha guardat correctament")  # Shows OK button
+            
 

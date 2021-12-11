@@ -40,7 +40,7 @@ def deleteUser():
 @app.route('/addSentiment', methods=['POST'])
 def addSentiment():
     args = request.get_json()
-    addSentimentDb(args['FullName'], args['Text'], 0.5, args['label'])
+    addSentimentDb(args['FullName'], args['Text'], 0.0, "")
     return "Sentiment Added"
 
 @app.route('/deleteSentiment', methods=['POST'])

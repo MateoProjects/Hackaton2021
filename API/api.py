@@ -1,4 +1,4 @@
-from re import A
+
 from flask import Flask, request
 app = Flask(__name__)
 from dbmanager import *

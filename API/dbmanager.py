@@ -80,7 +80,7 @@ def createTableSentiment(fullname):
     cur = con.cursor()
     cur.execute('CREATE TABLE IF NOT EXISTS ' + fullname +
                 '_sentiment (id INTEGER PRIMARY KEY AUTOINCREMENT, '
-                'text TEXT, sentiment REAL , label TEXT)')
+                'text TEXT, sentiment INTEGER , label TEXT)')
     con.commit()
     con.close()
     logging.info("Table created")

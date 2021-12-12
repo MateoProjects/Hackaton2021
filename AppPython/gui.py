@@ -53,7 +53,7 @@ if __name__ == '__main__':
                 file.write(val)
                 file.close()
                 print(values)
-                res = requests.post('http://localhost:5000//createUser', json={"Name": values['nom'], "LastName":values['cognom'],"FullName": values['FullName'], "age":values['edat'], "psw":values['contrasenya'], "psychologist": values['FullName']})
+                res = requests.post('http://localhost:5000//createUser', json={"Name": values['nom'], "LastName":values['cognom'],"FullName": values['FullName'], "age": values['edat'], "psw":values['contrasenya'], "psychologist": values['psicoleg']})
 
             window[1].close()
     while True:

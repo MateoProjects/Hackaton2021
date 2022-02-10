@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".register">
+
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/fondo"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="100dp"
+            android:gravity="center"
+            android:text="@string/tittle_register"
+            android:textAllCaps="true"
+            android:textColor="@color/material_on_background_emphasis_high_type"
+            android:textSize="100sp"
+            android:textStyle="bold">
+
+        </TextView>
+
+        <TextView
+            android:id="@+id/name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="50dp"
+            android:gravity="center"
+            android:text="@string/nom"
+            android:textAlignment="center"
+            android:textAllCaps="true"
+            android:textSize="45sp"
+            android:textStyle="bold">
+
+        </TextView>
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/name_register"
+            android:layout_width="500dp"
+            android:layout_height="60dp"
+            android:layout_gravity="center"
+            android:layout_margin="5dp"
+            android:hint="@string/your_name"
+            android:inputType="text"
+            android:maxLines="1"
+            android:textAlignment="center"
+            android:textSize="30sp" />
+
+        <TextView
+            android:id="@+id/cognom"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="20sp"
+            android:gravity="center"
+            android:text="@string/cognom"
+            android:textAlignment="center"
+            android:textAllCaps="true"
+            android:textSize="45sp"
+            android:textStyle="bold">
+
+        </TextView>
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/cognom_register"
+            android:layout_width="500dp"
+            android:layout_height="60dp"
+            android:layout_gravity="center"
+            android:hint="@string/your_lastname"
+            android:inputType="text"
+            android:maxLines="1"
+            android:textAlignment="center"
+            android:textSize="30sp">
+
+        </com.google.android.material.textfield.TextInputEditText>
+
+        <TextView
+            android:id="@+id/mail_doctor"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="20sp"
+            android:gravity="center"
+            android:text="@string/mail_doctor"
+            android:textAlignment="center"
+            android:textAllCaps="true"
+            android:textSize="45sp"
+            android:textStyle="bold">
+
+        </TextView>
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/mail_doctor_register"
+            android:layout_width="500dp"
+            android:layout_height="80dp"
+            android:layout_gravity="center"
+            android:hint="@string/exempla_mail"
+            android:inputType="textEmailAddress"
+            android:maxLines="1"
+            android:textAlignment="center"
+            android:textSize="30sp">
+
+        </com.google.android.material.textfield.TextInputEditText>
+
+        <Button
+            android:id="@+id/save_register_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="60dp"
+            android:backgroundTint="#2196f3"
+            android:gravity="bottom"
+            android:text="@string/save_button_registerr"
+            android:textSize="35sp"
+            android:textStyle="bold">
+
+        </Button>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="30dp"
+            android:src="@drawable/logo_upc" />
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+</FrameLayout>
